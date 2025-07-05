@@ -5,7 +5,6 @@ import os
 import matplotlib.pyplot as plt
 import re
 
-# --- Session Initialization ---
 if "results" not in st.session_state:
     st.session_state.results = {}
 if "available_models" not in st.session_state:
@@ -19,7 +18,6 @@ dataset_path = "nba_stats.csv"
 df = pd.read_csv(dataset_path)
 target_column = "Pos"
 
-# --- Show the Dataset Info ---
 st.write("### About the NBA Stats Dataset")
 st.write("This dataset contains statistics of NBA players, including points, assists, rebounds, shooting percentages, and player positions.")
 st.write("It is used to train machine learning models to predict player positions.")
@@ -47,7 +45,6 @@ hyperparams = {
     "Linear SVM": st.sidebar.slider("C (Linear SVM)", 0.1, 10.0, 1.0)
 }
 
-# --- Run Models ---
 for model_name, script in models.items():
     if st.button(f"Run {model_name}"):
         st.write(f"Running {model_name}...")
@@ -72,7 +69,6 @@ for model_name, script in models.items():
             with st.expander(f"See {model_name} Output"):
                 st.text_area("Output", output, height=250)
 
-            # --- Extract Metrics ---
             try:
                 acc_match = re.search(r"Validation Set Accuracy: ([0-9]*\.?[0-9]+)%", output)
                 precision_match = re.search(r"Precision: ([0-9]*\.?[0-9]+)%", output)
