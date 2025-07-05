@@ -50,8 +50,8 @@ Matplotlib – Accuracy comparison chart <br>
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/model-performance-tester.git
-   cd model-performance-tester
+   git clone https://github.com/kinturkt/NBA-performance-tester.git
+   cd nba-performance-tester
 
 2. Install dependencies:
    ```bash
