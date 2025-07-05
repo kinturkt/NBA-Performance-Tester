@@ -65,7 +65,7 @@ Matplotlib – Accuracy comparison chart <br>
 ## 🌐 Live Demo
 
 Try it live on Streamlit Cloud:  
-👉 [Launch App]((https://nba-model-performance-tester.streamlit.app/))
+👉 [Launch App][(https://nba-model-performance-tester.streamlit.app/)]
 
 ---
 
